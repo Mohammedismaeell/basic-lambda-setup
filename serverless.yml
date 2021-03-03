@@ -1,0 +1,28 @@
+# Welcome to serverless. Read the docs
+# https://serverless.com/framework/docs/
+
+# Serverless.yml is the configuration the CLI
+# uses to deploy your code to your provider of choice
+
+# The `service` block is the name of the service
+service: mohammed-nodejs-project
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-offline
+
+# The `functions` block defines what code to deploy
+functions:
+  helloWorld:
+    handler: src/handler.handler
+    # The `events` block defines how to trigger the handler.helloWorld code
+    # events:
+    #   - http:
+    #       path: hello-world
+    #       method: get
