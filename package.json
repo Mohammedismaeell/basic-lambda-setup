@@ -1,5 +1,6 @@
 {
   "name": "mohammed-basic-lambda-setup",
+  "description": "Backend (Node.js) using Serverless Framework",
   "version": "1.0.1",
   "main": "src/handler.js",
   "license": "MIT",
@@ -10,9 +11,7 @@
     "deploy:stage": "export NODE_ENV=stage && yarn deploy:env",
     "lint": "eslint src --ext ts,js --no-ignore --fix",
     "dev": "sls offline -P 4000",
-    "serve:watch": "nodemon -e js,ts,jsx,tsx -x yarn serve",
     "test": "jest",
-    "test:watch": "jest --watch",
     "build": "sls webpack"
   },
   "devDependencies": {
@@ -25,7 +24,6 @@
     "husky": "^4.0.2",
     "jest": "^24.9.0",
     "lint-staged": "^10.0.3",
-    "nodemon": "^2.0.0",
     "prettier": "^2.0.0",
     "serverless": "^1.51.0",
     "serverless-dotenv-plugin": "^2.1.1",
