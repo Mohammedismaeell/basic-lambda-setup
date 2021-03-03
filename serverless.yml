@@ -5,7 +5,7 @@
 # uses to deploy your code to your provider of choice
 
 # The `service` block is the name of the service
-service: mohammed-nodejs-project
+service: mohammed-basic-lambda-setup
 
 # The `provider` block defines where your service will be deployed
 provider:
@@ -20,7 +20,7 @@ plugins:
 # The `functions` block defines what code to deploy
 functions:
   helloWorld:
-    handler: src/handler.handler
+    handler: src/functions/handler.handler
     # The `events` block defines how to trigger the handler.helloWorld code
     # events:
     #   - http:
