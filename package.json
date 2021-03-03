@@ -5,14 +5,11 @@
   "main": "src/handler.js",
   "license": "MIT",
   "scripts": {
-    "deploy:env": "sls deploy --stage dev",
-    "deploy": "export NODE_ENV=dev && yarn deploy:env",
-    "deploy:production": "export NODE_ENV=production && yarn deploy:env",
-    "deploy:stage": "export NODE_ENV=stage && yarn deploy:env",
+    "deploy": "sls deploy",
     "lint": "eslint src --ext ts,js --no-ignore --fix",
     "dev": "sls offline -P 4000",
     "test": "jest",
-    "build": "sls webpack"
+    "build": "sls package"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.39",

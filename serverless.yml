@@ -12,6 +12,18 @@ provider:
   name: aws
   runtime: nodejs12.x
 
+  custom:
+  region: ${opt:region, 'eu-north-1'}
+  regions:
+    eu-north-1:
+      endpointType: EDGE
+      partition: 'aws'
+      url: 'eu'
+  stages:
+    - dev
+    - staging
+    - prod
+
 plugins:
   - serverless-dotenv-plugin
   - serverless-webpack
